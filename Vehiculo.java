@@ -35,8 +35,6 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Referencia: " + referencia
-                + " Velocidad Maxima: " + velocidadMaxima
-                + " Color: " + color;
+        return "Referencia: " + referencia + " Velocidad maxima: " + velocidadMaxima + " Color: " + color;
     }
 }
