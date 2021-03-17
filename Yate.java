@@ -23,7 +23,6 @@ public class Yate extends Vehiculo {
 
     @Override
     public String toString() {
-        return super.toString()
-                + " Peso máximo: " + pesoMaximo;
+        return super.toString() + " Peso máximo: " + pesoMaximo;
     }
 }
