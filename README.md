@@ -1,6 +1,6 @@
 # JavaProgramming2
 Examen:
- ##Primer Examen de Lenguajes de Programación II 
+ ## Primer Examen de Lenguajes de Programación II 
 Supongamos que se tiene un garaje que solo permite guardar 10 vehículos, y dichos  vehículos solo pueden ser aviones, yates o carros. 
 1. Cree la clase Vehiculo con las propiedades color, referencia y velocidadMaxima. 
 2. El color debe ser un Enum con NEGRO, BLANCO, AZUL, VERDE y GRIS. 3. Cree las clases Avion, Yate y Carro, las cuales deben heredar de la clase  Vehiculo. 
