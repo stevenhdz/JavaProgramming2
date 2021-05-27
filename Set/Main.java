@@ -62,19 +62,19 @@ public class Main {
                                             System.out.println("Has seleccionado, Avion\n");
                                             Avion v = new RecibidorDeInformacion().ingresarInformacionAvion();
                                             set.add(v);
-                                            i++;
+
                                         }
                                         case 2 -> {
                                             System.out.println("Has seleccionado, Yate\n");
                                             Yate y = new RecibidorDeInformacion().ingresarInformacionYate();
                                             set.add(y);
-                                            i++;
+
                                         }
                                         case 3 -> {
                                             System.out.println("Has seleccionado, Carro\n");
                                             Carro c = new RecibidorDeInformacion().ingresarInformacionCarro();
                                             set.add(c);
-                                            i++;
+
                                         }
                                         case 4 -> {
                                         }
@@ -111,38 +111,33 @@ public class Main {
                                         case 1 -> {
                                             Optional<Vehiculo> vehiculoss = set.stream()
                                                     .max(Comparator.comparing(vehiculos -> vehiculos.getVelocidadMaxima()));
-                                            Object n = vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss;
-                                            System.out.print(n);
+                                            System.out.print(vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss);
                                         }
                                         case 2 -> {
                                             Optional<Vehiculo> vehiculoss = set.stream()
                                                     .min(Comparator.comparing(vehiculos -> vehiculos.getVelocidadMaxima()));
-                                            Object n = vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss;
-                                            System.out.print(n);
+                                            System.out.print(vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss);
                                         }
                                         case 3 -> {
                                             List<Vehiculo> vehiculoss = set.stream()
                                                     .sorted(Comparator.comparing(Vehiculo::getVelocidadMaxima).reversed())
                                                     .collect(Collectors.toList());
-                                            Object n = vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss;
-                                            System.out.print(n);
+                                            System.out.print(vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss);
                                         }
                                         case 4 -> {
                                             List<Vehiculo> vehiculoss = set.stream()
-                                                    .filter(vehiculos -> vehiculos.getColor().equals(vehiculos.getColor().AZUL) || vehiculos.getColor().equals(vehiculos.getColor().NEGRO))
+                                                    .filter(vehiculos -> vehiculos.getColor().equals(Color.AZUL) || vehiculos.getColor().equals(Color.NEGRO))
                                                     .collect(Collectors.toList());
-                                            Object n = vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss;
-                                            System.out.print(n);
+                                            System.out.print(vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss);
                                         }
                                         case 5 -> {
                                             String vehiculoss = set.stream()
-                                                    .filter(vehiculos -> vehiculos.getColor().equals(vehiculos.getColor().BLANCO) || vehiculos.getColor().equals(vehiculos.getColor().VERDE))
+                                                    .filter(vehiculos -> vehiculos.getColor().equals(Color.BLANCO) || vehiculos.getColor().equals(Color.VERDE))
                                                     .map(Vehiculo::getReferencia)
                                                     .reduce(" ", (acomulador, n) -> acomulador.concat(n) + " ");
-                                            Object n = vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss;
-                                            System.out.print(n);
+                                            System.out.print(vehiculoss.isEmpty() ? "Esta vacio" : vehiculoss);
                                         }
-                                       
+
                                     }
                                 } else {
                                     System.out.println("Ingresa un numero del 1 al 5.");
